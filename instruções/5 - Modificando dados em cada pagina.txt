@@ -1,0 +1,49 @@
+1. em pageController.ts
+
+    1.1 - cria um objedo banner
+      +   export const home = ((req:Request, res:Response)=>{
+                 res.render('pages/page', {
+                   banner: {
+                       title: 'Todos os animais',
+                       background: 'allanimals.jpg'
+                   }
+             });
+          });
+
+    1.2 - faz a verificação da section
+
+       + {{#banner}}
+               <section class="banner" style="background-image: url('assets/images/{{ background }}')">{{ title }}</section>
+               <h2>{{title}} disponíveis para adoção</h2>
+         {{/banner}}   
+    
+    1.3 - crias os outros objetos banner
+
+      +   export const dogs = ((req:Request, res:Response)=>{
+                 res.render('pages/page', {
+                   banner: {
+                       title: 'Cachorros',
+                       background: 'banner_dog.jpg'
+                   }
+             });
+          });
+    
+      +   export const cats = ((req:Request, res:Response)=>{
+                 res.render('pages/page', {
+                   banner: {
+                       title: 'Gatos',
+                       background: 'banner_cat.jpg'
+                   }
+             });
+          });
+
+       +   export const fishes = ((req:Request, res:Response)=>{
+                 res.render('pages/page', {
+                   banner: {
+                       title: 'Peixes',
+                       background: 'banner_fish.jpg'
+                   }
+             });
+          });   
+
+       ** fim **   
