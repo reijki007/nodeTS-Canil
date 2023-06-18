@@ -17,7 +17,7 @@
     "url": "https://github.com/reijki007/nodeTS-Canil/issues"
   },
   "homepage": "https://github.com/reijki007/nodeTS-Canil#readme",
-  "dependencies": {    
+  "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mustache-express": "^1.3.2",

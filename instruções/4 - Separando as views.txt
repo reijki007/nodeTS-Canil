@@ -1,0 +1,64 @@
+1. adiciona os arquivos no github
+ + no terminal=> git add .
+ + git commit -m "base criada!!!"
+ + git push
+
+2. criar 2 pastas em views ( pages e partials )     
+ + src/views/pages
+ + src/views/partials
+
+3. criar 2 arquivos em src/views/partials 
+ + footer.mustache
+ + header.mustache
+
+4. Configurando o partials/header.mustache mover as tags do (.html/index.html)
+ 
+ +  <!DOCTYPE html>
+ +  <html lang="pt">
+ +  <head>
+ +     // conteudo do head
+ +  </head>
+ +  <body>
+ +  <header>
+ +     // conteudo do header
+ +  </header>
+ +  <nav>
+ +     // conteudo do nav
+ +  </nav>
+
+5.  No header.mustache editar 
+
+    1.1 - o caminho de <href="/" para pegar os itens da pasta do projeto
+
+ -  <link rel="stylesheet" href="assets/css/style.css" />
+ +  <link rel="stylesheet" href="/assets/css/style.css" /> 
+
+ -  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+ +  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+   
+ - <a href=" ">PetDevShop</a>   
+ + <a href="/">PetDevShop</a> 
+
+ - <form method="GET" action=" ">
+ + <form method="GET" action="/search">
+
+6.  Copiar as tags de _html/index.html
+    1.1 colar em footer.mustache
+
++ <footer class="container">
++    Feito por Reijki007
++ </footer>
++ </body>
++ </html>   
+
+7. Criando os views em (src/views/pages/page.mustache)
++ {{>partials/header}}
+   
+   // conteudo das páginas
+ 
++ {{>partials/footer}}   
+     
+8. Testanto página
+    1.1 descomentar em pageController
+    res.render('pages/page');
+
