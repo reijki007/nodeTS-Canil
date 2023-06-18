@@ -1,9 +1,9 @@
 1. Criando o servidor
     1.1 - importar as bibliotecas 
-        import express from "express";
-        import dotenv from 'dotenv';
-        import mustache from 'mustache-express';
-        import path from 'path';
+          import express from "express";
+          import dotenv from 'dotenv';
+          import mustache from 'mustache-express';
+          import path from 'path';
     
 2. Configurando o dotenv
     2.1 - criar arquivo .env
@@ -13,7 +13,7 @@
 3. configurando template engine
     3.1 - criar const server = express();
     3.2 - server.set('view engine', 'mustache'); -- configura o view engine
-    3.3 - criar pasta views dentro da pasta do arquivo
+    3.3 - criar pasta views dentro da pasta ( src/views ) -- raiz do projeto
     3.3 - server.set('views', path.join(__dirname, 'views')); 
     --pasta de views / (__dirname, 'views')o join pega a pasta do arquivo e junta com os views
     3.4 - server.engine('mustache', mustache()); --roda a função mustache
