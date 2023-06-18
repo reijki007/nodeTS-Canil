@@ -33,6 +33,9 @@
     "scripts":{
         "start-dev": "npx nodemon -e ts,json,mustache src/server.ts"
     }
+
+
+    
 ** editar o README.md **
 # Projeto-Canil *
 
