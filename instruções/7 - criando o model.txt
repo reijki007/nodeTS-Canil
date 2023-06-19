@@ -1,0 +1,42 @@
+1. Criando Model
+    1.1 - em src/models/
+     +  pets.ts 
+
+    1.2 - criar banco de dados fake(simular)
+     +  copiar as informações do arquivo bd_fake.txt -- na raiz do projeto
+
+    1.3 - criar um type para Pet
+     + type PetType = 'dog' | 'cat' | 'fishes'; 
+     + type PetSex = 'Masculino' | 'Feminino';
+     + type Pet = {
+        type: PetType ,
+        image: string,
+        name: string,
+        color: string,
+        sex: 'Masculino' | 'Feminino'
+     };
+     
+    1.4 - usa o type em  data: Pet[] = []
+
+    1.5 - criar objeto PET={} em pet.ts
+
+     +   export const Pet = {
+        // Pegar todos os pets
+            getAll:(): Pet[] => {
+                return data;
+            },
+        // filtrar os pets por tipo    
+            getFromType: (type: PetType): Pet[] => {
+                return data.filter(item=> item.type === type);
+            },
+        // filtrar os pets pelo nome
+            getFromName: (name:string):Pet[] => {
+                return data.filter(item => 
+                    item.name.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) > -1
+                );
+            }                
+            
+    };
+
+
+    ** fim **
